@@ -11,4 +11,4 @@ PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_AAPT_CONFIG := normal
 BUILD_ARM_FOR_X86 := true
 
-
+$(call inherit-product-if-exists, vendor/lenovo/yt2/vendor-blobs.mk)
