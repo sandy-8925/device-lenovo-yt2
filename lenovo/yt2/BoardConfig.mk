@@ -32,3 +32,5 @@ BOARD_KERNEL_IMAGE_NAME := bzImage
 
 BOARD_BOOT_HEADER_VERSION := 0
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+BOARD_KERNEL_CMDLINE += printk.devkmsg=on androidboot.hardware=yt2
