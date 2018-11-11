@@ -16,3 +16,9 @@ BUILD_ARM_FOR_X86 := true
 TARGET_COPY_OUT_VENDOR := vendor
 FIRMWARE_DIR_NAME := firmware
 $(call inherit-product-if-exists, vendor/lenovo/yt2/vendor-blobs.mk)
+
+TARGET_KERNEL_SOURCE := kernel/lenovo/yt2
+TARGET_KERNEL_ARCH := x86_64
+BOARD_KERNEL_IMAGE_NAME := bzImage
+
+PRODUCT_COPY_FILES += $(TARGET_KERNEL_SOURCE)/arch/$(TARGET_KERNEL_ARCH)/boot/$(BOARD_KERNEL_IMAGE_NAME):out/target/product/yt2/kernel
