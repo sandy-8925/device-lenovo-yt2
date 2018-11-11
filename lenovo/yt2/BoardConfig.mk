@@ -24,12 +24,11 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 134217728
 
 BOARD_FLASH_BLOCK_SIZE := 2048
 
-TARGET_KERNEL_SOURCE := kernel/lenovo/yt2
-TARGET_KERNEL_ARCH := x86_64
-BOARD_KERNEL_IMAGE_NAME := bzImage
-BOARD_KERNEL_CMDLINE += printk.devkmsg=on
-BOARD_KERNEL_CMDLINE += androidboot.hardware=yt2
+BOARD_KERNEL_CMDLINE += root=/dev/block/mmcblk0p13
+BOARD_KERNEL_CMDLINE += printk.devkmsg=on loglevel=4
+BOARD_KERNEL_CMDLINE += androidboot.hardware=yt2 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware
+BOARD_KERNEL_CMDLINE += vga=current i915.modeset=1 drm.vblankoffdelay=1 acpi_backlight=vendor i915.mipi_panel_id=3
 
 BOARD_BOOT_HEADER_VERSION := 0
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
