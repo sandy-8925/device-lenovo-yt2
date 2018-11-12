@@ -1,7 +1,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_x86_64_a.mk)
 
-PRODUCT_COPY_FILES += device/lenovo/yt2/config_files/fstab.hardware:system/etc/fstab.yt2
+PRODUCT_COPY_FILES += \
+			device/lenovo/yt2/config_files/fstab.hardware:root/fstab.yt2 \
+			device/lenovo/yt2/config_files/init.hardware.rc:root/init.yt2.rc
 
 PRODUCT_NAME := aosp_yt2
 PRODUCT_DEVICE := yt2
