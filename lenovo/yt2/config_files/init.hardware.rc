@@ -1,5 +1,2 @@
 on fs
-    mount_all --early /fstab.yt2
-
-on late-fs
-    mount_all --late /fstab.yt2
+    mount_all /fstab.yt2
