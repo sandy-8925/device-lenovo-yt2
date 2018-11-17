@@ -1,7 +1,7 @@
 # Android fstab file.
 
-#<src>                                              <mnt_point>        <type>      <mnt_flags and options>                               <fs_mgr_flags>
-/dev/block/by-name/system			    /system		ext4	   ro,barrier=1						 wait
-/dev/block/by-name/logs			    	    /vendor		ext4	   ro,barrier=1						 wait
-/dev/block/by-name/data			    	    /data		ext4	   noatime,nosuid,nodev,discard,barrier=1,data=ordered	 wait,check,quota,formattable
-/dev/block/by-name/cache		    	    /cache		ext4	   noatime,nosuid,nodev,barrier=1,cache=ordered	         wait,check
+#<src>                       <mnt_point>    <type>      <mnt_flags and options>                              <fs_mgr_flags>
+/dev/block/by-name/system    /system        ext4        ro,barrier=1                                         wait
+/dev/block/by-name/logs      /vendor        ext4        ro,barrier=1                                         wait
+/dev/block/by-name/data      /data          ext4        noatime,nosuid,nodev,discard,barrier=1,data=ordered  wait,check,quota,formattable
+/dev/block/by-name/cache     /cache         ext4        noatime,nosuid,nodev,barrier=1,cache=ordered         wait,check
