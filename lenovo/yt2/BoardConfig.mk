@@ -41,3 +41,5 @@ OS_VERSION := 9
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION) --pagesize $(BOARD_PAGESIZE) --os_version $(OS_VERSION)
 
 TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/arch/$(TARGET_KERNEL_ARCH)/boot/$(BOARD_KERNEL_IMAGE_NAME)
+
+include device/lenovo/yt2/config_files/yt2_sepolicy.mk
